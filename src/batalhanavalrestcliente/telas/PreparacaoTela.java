@@ -276,7 +276,7 @@ public class PreparacaoTela extends TabuleiroPreparacao {
         root.setTop(hBoxTop);
         root.setRight(vBoxDireita);
 
-        BatalhaNavalRESTCliente.fxContainer.setScene(new Scene(root));
+        BatalhaNavalRESTCliente.setScene(root);
     }
 
     private GridPane iniciarTelaSelecao() {

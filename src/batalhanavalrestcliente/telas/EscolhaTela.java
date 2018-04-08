@@ -37,7 +37,7 @@ public class EscolhaTela {
 
         StackPane root = new StackPane(vBox);
 
-        BatalhaNavalRESTCliente.fxContainer.setScene(new Scene(root));
+        BatalhaNavalRESTCliente.setScene(root);
     }
 
     private void entrarEmPartida() {

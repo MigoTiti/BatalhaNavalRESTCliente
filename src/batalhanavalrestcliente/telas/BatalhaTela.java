@@ -334,7 +334,7 @@ public class BatalhaTela extends TabuleiroPronto {
             }
         }).start();
 
-        BatalhaNavalRESTCliente.fxContainer.setScene(new Scene(root));
+        BatalhaNavalRESTCliente.setScene(root);
     }
 
     private RectangleCoordenado gerarRect(int x, int y, boolean usuario) {

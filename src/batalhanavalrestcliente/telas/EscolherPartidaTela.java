@@ -90,6 +90,6 @@ public class EscolherPartidaTela {
         
         root.setBottom(hbox2);
         
-        BatalhaNavalRESTCliente.fxContainer.setScene(new Scene(root));
+        BatalhaNavalRESTCliente.setScene(root);
     }
 }

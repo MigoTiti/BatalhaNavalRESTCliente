@@ -10,6 +10,7 @@ import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -30,7 +31,7 @@ public class BatalhaNavalRESTCliente extends JApplet {
 
     private static final int JFXPANEL_WIDTH_INT = 1000;
     private static final int JFXPANEL_HEIGHT_INT = 700;
-    public static JFXPanel fxContainer;
+    private static JFXPanel fxContainer;
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
@@ -81,10 +82,13 @@ public class BatalhaNavalRESTCliente extends JApplet {
         vBox.setSpacing(10);
         vBox.setPadding(new Insets(10));
 
-        StackPane root = new StackPane(vBox);
-        fxContainer.setScene(new Scene(root));
+        setScene(new StackPane(vBox));
     }
 
+    public static void setScene(Parent cena) {
+        fxContainer.setScene(new Scene(cena));
+    }
+    
     public static void enviarMensagemErro(String mensagem) {
         Platform.runLater(() -> {
             Alert alert = new Alert(Alert.AlertType.ERROR);
